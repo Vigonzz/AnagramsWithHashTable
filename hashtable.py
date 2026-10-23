@@ -21,11 +21,31 @@ class HashTable:
         self.table = [None] * table_size
         self.counter = 0
 
+    # Our hash  method that will return the integers index
     def hash(self, x):
         running_total = 0
         for character in x:
           running_total = (running_total * 31) + ord(character)
         return running_total % self.table_size
+    
+    # Insert method that
+    def insert(self, x):
+        index = self.hash(x)
+        current = self.table[index]
+
+        while current is not None:
+            if current.key == x:
+                return False
+            else:
+                current = current.next
+        new_node = Node(x)
+        new_node.next = self.table[index]
+        self.table[index] = new_node
+        self.counter += 1
+
+    def size(self):
+        return self.counter
+
     
 test_table = HashTable(11)
 print(test_table.hash("dna"))
