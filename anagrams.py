@@ -13,6 +13,10 @@ def count_anagram_roots(filename):
     with open(filename, "r", encoding = "utf-8") as file:
         # Go through each line, lowercase clean it up and store it in our table
         for line in file:
+            # Looked into the concepts of re.findall and re.split to determine what would better
+            # our expected outcome/pattern
+            # GeeksforGeeks. (2025, July 23). Re.findall() in python. https://www.geeksforgeeks.org/python/re-findall-in-python/ 
+            # GeeksforGeeks. (2025b, July 23). Re.split() in python. https://www.geeksforgeeks.org/python/re-split-in-python/ 
             words = re.findall("[a-zA-Z0-9]+", line)
             for word in words:
                 lower_word = word.lower()

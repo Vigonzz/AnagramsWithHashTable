@@ -24,7 +24,7 @@ class TestHash(unittest.TestCase):
 
     
     def test_duplicates(self):
-        ''' Test duplicates '''
+        ''' Test duplicates to ensure they dont get added into our hashtable '''
         duplicate_table = HashTable()
 
         word = duplicate_table.insert("mr")
