@@ -42,10 +42,9 @@ class HashTable:
         new_node.next = self.table[index]
         self.table[index] = new_node
         self.counter += 1
+        return True
 
     def size(self):
         return self.counter
 
     
-test_table = HashTable(11)
-print(test_table.hash("dna"))
