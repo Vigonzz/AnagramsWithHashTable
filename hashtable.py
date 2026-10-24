@@ -8,6 +8,12 @@
 # https://claude.ai/share/7a85c04f-86cc-4347-8c54-ddc88be4bf2b
 # ALL code was produced by myself 
 
+# Additional reading on open addressing vs separate chaining, and overall hashing:
+# Scribd. (n.d.). Scribd. https://www.scribd.com/document/623871691/Hashing 
+# https://namir.dev/blog/open-addressing-vs-chaining-hash-collisions/
+# GeeksforGeeks. (2025b, July 23). Implementation of hash table in Python using separate chaining. https://www.geeksforgeeks.org/dsa/implementation-of-hash-table-in-python-using-separate-chaining/ 
+
+
 
 # Create the node
 class Node:
